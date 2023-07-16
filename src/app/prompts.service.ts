@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
 
@@ -9,6 +9,8 @@ import { of } from 'rxjs';
 })
 export class PromptsService {
   private selections: { step: string; selection: string }[] = [];
+  private mainCategorySubject: BehaviorSubject<string> =
+    new BehaviorSubject<string>('');
 
   constructor(private http: HttpClient) {}
 
@@ -53,5 +55,13 @@ export class PromptsService {
       ),
       catchError(() => of([]))
     );
+  }
+
+  setMainCategory(category: string): void {
+    this.mainCategorySubject.next(category);
+  }
+
+  getMainCategory(): BehaviorSubject<string> {
+    return this.mainCategorySubject;
   }
 }

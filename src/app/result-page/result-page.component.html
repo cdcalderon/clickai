@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Your Selections</h1>
+  <h1>Your Selection: {{ mainCategory | titlecase }}</h1>
   <ul>
     <li *ngFor="let selection of selections">{{ selection }}</li>
   </ul>

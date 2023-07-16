@@ -19,6 +19,7 @@ export class CategoryComponent implements OnInit {
   }
 
   onSelect(category: string): void {
+    this.promptsService.setMainCategory(category);
     this.router.navigate(['/prompt', category, 'start']);
   }
 }
