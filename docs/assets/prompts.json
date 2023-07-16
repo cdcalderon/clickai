@@ -1,0 +1,104 @@
+[
+  {
+    "step": "start",
+    "title": "What type of artwork do you want?",
+    "options": [
+      {
+        "name": "Cartoon",
+        "step": "cartoon",
+        "image": "cartoon.jpg",
+        "route": "cartoon",
+        "options": [
+          {
+            "name": "Anime/2D Art",
+            "step": "anime",
+            "image": "anime.jpg",
+            "route": "anime",
+            "options": [
+              {
+                "name": "Studio Ghibli",
+                "step": "ghibli",
+                "image": "ghibli.jpg",
+                "route": "ghibli"
+              },
+              {
+                "name": "Makoto Shinkai",
+                "step": "shinkai",
+                "image": "shinkai.jpg",
+                "route": "shinkai"
+              },
+              {
+                "name": "Neo Tokyo",
+                "step": "neo_tokyo",
+                "image": "neo_tokyo.jpg",
+                "route": "neo_tokyo"
+              },
+              {
+                "name": "Pokemon",
+                "step": "pokemon",
+                "image": "pokemon.jpg",
+                "route": "pokemon"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Realistic",
+        "step": "realistic",
+        "image": "realistic.jpg",
+        "route": "realistic",
+        "options": [
+          {
+            "name": "Photography",
+            "step": "photography",
+            "image": "photography.jpg",
+            "route": "photography",
+            "options": [
+              {
+                "name": "Landscape",
+                "step": "landscape",
+                "image": "landscape.jpg",
+                "route": "landscape",
+                "options": [
+                  {
+                    "name": "Mountain",
+                    "step": "mountain",
+                    "image": "mountain.jpg",
+                    "route": "mountain"
+                  },
+                  {
+                    "name": "Sea",
+                    "step": "sea",
+                    "image": "sea.jpg",
+                    "route": "sea"
+                  }
+                ]
+              },
+              {
+                "name": "Portraits",
+                "step": "portraits",
+                "image": "portraits.jpg",
+                "route": "portraits",
+                "options": [
+                  {
+                    "name": "Monochrome",
+                    "step": "monochrome",
+                    "image": "monochrome.jpg",
+                    "route": "monochrome"
+                  },
+                  {
+                    "name": "Color",
+                    "step": "color",
+                    "image": "color.jpg",
+                    "route": "color"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
