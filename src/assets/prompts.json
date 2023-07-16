@@ -44,6 +44,12 @@
                     "route": "pokemon"
                   }
                 ]
+              },
+              {
+                "name": "3d blender",
+                "step": "3dblender",
+                "image": "3dblender.jpg",
+                "route": "3dblender"
               }
             ]
           },
@@ -100,6 +106,12 @@
                     ]
                   }
                 ]
+              },
+              {
+                "name": "Realistic art Forms",
+                "step": "realisticartforms",
+                "image": "realisticartforms.jpg",
+                "route": "realisticartforms"
               }
             ]
           }
