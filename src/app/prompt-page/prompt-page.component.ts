@@ -47,12 +47,8 @@ export class PromptPageComponent implements OnInit {
       if (prompt.step === route) {
         return prompt;
       }
-      const nestedStep = this.findStepByRoute(prompt.options, route);
-      if (nestedStep) {
-        return nestedStep;
-      }
-      for (const option of prompt.options) {
-        const nestedStep = this.findStepByRoute(option.options, route);
+      if (prompt.options) {
+        const nestedStep = this.findStepByRoute(prompt.options, route);
         if (nestedStep) {
           return nestedStep;
         }
