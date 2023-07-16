@@ -1,0 +1,15 @@
+/* Styles for the result page */
+$result-bg-color: #007bff;
+
+.result-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.result-page li {
+  background: $result-bg-color;
+  color: $result-text-color;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}

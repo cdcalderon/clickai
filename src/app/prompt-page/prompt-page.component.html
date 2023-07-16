@@ -1,10 +1,12 @@
 <h1>{{ currentStep?.title }}</h1>
-<div class="buttons-container">
-  <button
-    *ngFor="let option of currentStep?.options"
-    routerLink="/prompt/{{ option.route }}"
-  >
-    <img src="assets/{{ option.image }}" alt="{{ option.name }}" />
-    {{ option.name }}
-  </button>
+<div class="container">
+  <div class="buttons-container">
+    <button
+      *ngFor="let option of currentStep?.options"
+      (click)="onSelect(option)"
+    >
+      <img src="assets/{{ option.image }}" alt="{{ option.name }}" />
+      {{ option.name }}
+    </button>
+  </div>
 </div>
