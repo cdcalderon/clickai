@@ -1,0 +1,34 @@
+[
+  {
+    "step": "start",
+    "title": "Get Started",
+    "options": [
+      {
+        "name": "Realistic",
+        "route": "realistic",
+        "image": "realistic.jpg"
+      },
+      {
+        "name": "Cartoon",
+        "route": "cartoon",
+        "image": "cartoon.jpg"
+      }
+    ]
+  },
+  {
+    "step": "realistic",
+    "title": "Select Realistic Art Form",
+    "options": [
+      {
+        "name": "Photography",
+        "route": "photography",
+        "image": "photography.jpg"
+      },
+      {
+        "name": "Realistic Art Forms",
+        "route": "realistic-art-forms",
+        "image": "realistic-art-forms.jpg"
+      }
+    ]
+  }
+]

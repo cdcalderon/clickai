@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  
+  button {
+    flex: 1 0 200px;
+    margin: 1em;
+    padding: 1em;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+  
