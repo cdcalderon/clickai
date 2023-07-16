@@ -1,0 +1,40 @@
+
+/* Styles for the buttons */
+$button-color: #007bff;
+$button-hover-color: #0056b3;
+$result-text-color: #fff;
+
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+
+  button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Add this line */
+    background: $button-color;
+    color: $result-text-color;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  
+    &:hover {
+      background-color: $button-hover-color;
+    }
+  }
+}

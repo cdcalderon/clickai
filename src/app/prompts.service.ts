@@ -46,9 +46,11 @@ export class PromptsService {
     );
   }
 
-  getCategories(): Observable<string[]> {
+  getCategories(): Observable<{ category: string; image: string }[]> {
     return this.http.get<any[]>('assets/prompts.json').pipe(
-      map((categories) => categories.map((c) => c.category)),
+      map((categories) =>
+        categories.map((c) => ({ category: c.category, image: c.image }))
+      ),
       catchError(() => of([]))
     );
   }

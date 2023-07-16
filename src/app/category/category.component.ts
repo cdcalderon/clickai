@@ -8,7 +8,7 @@ import { PromptsService } from '../prompts.service';
   styleUrls: ['./category.component.scss'],
 })
 export class CategoryComponent implements OnInit {
-  categories: string[] = [];
+  categories: { category: string; image: string }[] = []; // Update this line
 
   constructor(private router: Router, private promptsService: PromptsService) {}
 

@@ -1,8 +1,22 @@
-<div class="container">
+<!-- <div class="container">
   <h1>Select a Category</h1>
   <div class="buttons-container">
     <button *ngFor="let category of categories" (click)="onSelect(category)">
       {{ category }}
+    </button>
+  </div>
+</div> -->
+
+<div class="container">
+  <h1>Select a Category</h1>
+  <div class="buttons-container">
+    <button
+      *ngFor="let category of categories"
+      (click)="onSelect(category.category)"
+    >
+      <img src="assets/{{ category.image }}" alt="{{ category.category }}" />
+      <!-- Add this line -->
+      {{ category.category }}
     </button>
   </div>
 </div>
