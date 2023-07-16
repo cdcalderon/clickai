@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class PromptsService {
-  private selections: string[] = []; // Add this line
+  private selections: { step: string; selection: string }[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -14,13 +14,23 @@ export class PromptsService {
     return this.http.get<any[]>('assets/prompts.json');
   }
 
-  addSelection(selection: string): void {
-    // Add this method
-    this.selections.push(selection);
+  addSelection(step: string, selection: string): void {
+    const index = this.selections.findIndex((s) => s.step === step);
+    if (index >= 0) {
+      this.selections[index].selection = selection;
+    } else {
+      this.selections.push({ step, selection });
+    }
   }
 
   getSelections(): string[] {
-    // Add this method
-    return this.selections;
+    return this.selections.map((s) => s.selection);
+  }
+
+  clearSelectionsFrom(step: string): void {
+    const index = this.selections.findIndex((s) => s.step === step);
+    if (index >= 0) {
+      this.selections = this.selections.slice(0, index);
+    }
   }
 }

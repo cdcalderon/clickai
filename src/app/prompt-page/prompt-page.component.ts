@@ -19,20 +19,45 @@ export class PromptPageComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.promptsService.getPrompts().subscribe((prompts) => {
-        this.currentStep = prompts.find(
-          (prompt) => prompt.step === params['step']
-        );
+        console.log("params['step']", params['step']);
+
+        // this.currentStep = prompts.find(
+        //   (prompt) => prompt.step === params['step']
+        // );
+        this.currentStep = this.findStepByRoute(prompts, params['step']);
+
+        console.log(this.currentStep);
       });
     });
   }
 
   onSelect(option: any): void {
-    // Add this method
-    this.promptsService.addSelection(option.name);
+    this.promptsService.clearSelectionsFrom(this.currentStep.step);
+    this.promptsService.addSelection(this.currentStep.step, option.name);
     if (option.options) {
+      console.log(option.route);
       this.router.navigate(['/prompt', option.route]);
     } else {
       this.router.navigate(['/result']);
     }
+  }
+
+  findStepByRoute(prompts: any[], route: string): any {
+    for (const prompt of prompts) {
+      if (prompt.step === route) {
+        return prompt;
+      }
+      const nestedStep = this.findStepByRoute(prompt.options, route);
+      if (nestedStep) {
+        return nestedStep;
+      }
+      for (const option of prompt.options) {
+        const nestedStep = this.findStepByRoute(option.options, route);
+        if (nestedStep) {
+          return nestedStep;
+        }
+      }
+    }
+    return null;
   }
 }
