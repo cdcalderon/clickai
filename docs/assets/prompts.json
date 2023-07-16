@@ -1,97 +1,223 @@
 [
   {
-    "step": "start",
-    "title": "What type of artwork do you want?",
-    "options": [
+    "category": "midjourney",
+    "image": "midjourney.jpg",
+    "prompts": [
       {
-        "name": "Cartoon",
-        "step": "cartoon",
-        "image": "cartoon.jpg",
-        "route": "cartoon",
+        "step": "start",
+        "title": "What type of artwork do you want?",
         "options": [
           {
-            "name": "Anime/2D Art",
-            "step": "anime",
-            "image": "anime.jpg",
-            "route": "anime",
+            "name": "Cartoon",
+            "step": "cartoon",
+            "image": "cartoon.jpg",
+            "route": "cartoon",
             "options": [
               {
-                "name": "Studio Ghibli",
-                "step": "ghibli",
-                "image": "ghibli.jpg",
-                "route": "ghibli"
-              },
-              {
-                "name": "Makoto Shinkai",
-                "step": "shinkai",
-                "image": "shinkai.jpg",
-                "route": "shinkai"
-              },
-              {
-                "name": "Neo Tokyo",
-                "step": "neo_tokyo",
-                "image": "neo_tokyo.jpg",
-                "route": "neo_tokyo"
-              },
-              {
-                "name": "Pokemon",
-                "step": "pokemon",
-                "image": "pokemon.jpg",
-                "route": "pokemon"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Realistic",
-        "step": "realistic",
-        "image": "realistic.jpg",
-        "route": "realistic",
-        "options": [
-          {
-            "name": "Photography",
-            "step": "photography",
-            "image": "photography.jpg",
-            "route": "photography",
-            "options": [
-              {
-                "name": "Landscape",
-                "step": "landscape",
-                "image": "landscape.jpg",
-                "route": "landscape",
+                "name": "Anime/2D Art",
+                "step": "anime",
+                "image": "anime.jpg",
+                "route": "anime",
                 "options": [
                   {
-                    "name": "Mountain",
-                    "step": "mountain",
-                    "image": "mountain.jpg",
-                    "route": "mountain"
+                    "name": "Studio Ghibli",
+                    "step": "ghibli",
+                    "image": "ghibli.jpg",
+                    "route": "ghibli"
                   },
                   {
-                    "name": "Sea",
-                    "step": "sea",
-                    "image": "sea.jpg",
-                    "route": "sea"
+                    "name": "Makoto Shinkai",
+                    "step": "shinkai",
+                    "image": "shinkai.jpg",
+                    "route": "shinkai"
+                  },
+                  {
+                    "name": "Neo Tokyo",
+                    "step": "neo_tokyo",
+                    "image": "neo_tokyo.jpg",
+                    "route": "neo_tokyo"
+                  },
+                  {
+                    "name": "Pokemon",
+                    "step": "pokemon",
+                    "image": "pokemon.jpg",
+                    "route": "pokemon"
                   }
                 ]
               },
               {
-                "name": "Portraits",
-                "step": "portraits",
-                "image": "portraits.jpg",
-                "route": "portraits",
+                "name": "3d blender",
+                "step": "3dblender",
+                "image": "3dblender.jpg",
+                "route": "3dblender"
+              }
+            ]
+          },
+          {
+            "name": "Realistic",
+            "step": "realistic",
+            "image": "realistic.jpg",
+            "route": "realistic",
+            "options": [
+              {
+                "name": "Photography",
+                "step": "photography",
+                "image": "photography.jpg",
+                "route": "photography",
                 "options": [
                   {
-                    "name": "Monochrome",
-                    "step": "monochrome",
-                    "image": "monochrome.jpg",
-                    "route": "monochrome"
+                    "name": "Landscape",
+                    "step": "landscape",
+                    "image": "landscape.jpg",
+                    "route": "landscape",
+                    "options": [
+                      {
+                        "name": "Mountain",
+                        "step": "mountain",
+                        "image": "mountain.jpg",
+                        "route": "mountain"
+                      },
+                      {
+                        "name": "Sea",
+                        "step": "sea",
+                        "image": "sea.jpg",
+                        "route": "sea"
+                      }
+                    ]
                   },
                   {
-                    "name": "Color",
-                    "step": "color",
-                    "image": "color.jpg",
-                    "route": "color"
+                    "name": "Portraits",
+                    "step": "portraits",
+                    "image": "portraits.jpg",
+                    "route": "portraits",
+                    "options": [
+                      {
+                        "name": "Monochrome",
+                        "step": "monochrome",
+                        "image": "monochrome.jpg",
+                        "route": "monochrome"
+                      },
+                      {
+                        "name": "Color",
+                        "step": "color",
+                        "image": "color.jpg",
+                        "route": "color"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Realistic art Forms",
+                "step": "realisticartforms",
+                "image": "realisticartforms.jpg",
+                "route": "realisticartforms"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "research",
+    "image": "research.jpg",
+    "prompts": [
+      {
+        "step": "start",
+        "title": "Select a domain of research",
+        "options": [
+          {
+            "name": "Artificial Intelligence",
+            "step": "ai",
+            "image": "ai.jpg",
+            "route": "ai",
+            "options": [
+              {
+                "name": "Machine Learning",
+                "step": "ml",
+                "image": "ml.jpg",
+                "route": "ml",
+                "options": [
+                  {
+                    "name": "Neural Networks",
+                    "step": "neural_networks",
+                    "image": "neural_networks.jpg",
+                    "route": "neural_networks"
+                  },
+                  {
+                    "name": "Reinforcement Learning",
+                    "step": "rl",
+                    "image": "rl.jpg",
+                    "route": "rl"
+                  }
+                ]
+              },
+              {
+                "name": "Natural Language Processing",
+                "step": "nlp",
+                "image": "nlp.jpg",
+                "route": "nlp",
+                "options": [
+                  {
+                    "name": "Semantic Analysis",
+                    "step": "semantic_analysis",
+                    "image": "semantic_analysis.jpg",
+                    "route": "semantic_analysis"
+                  },
+                  {
+                    "name": "Speech Recognition",
+                    "step": "speech_recognition",
+                    "image": "speech_recognition.jpg",
+                    "route": "speech_recognition"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Computer Science",
+            "step": "cs",
+            "image": "cs.jpg",
+            "route": "cs",
+            "options": [
+              {
+                "name": "Algorithms",
+                "step": "algorithms",
+                "image": "algorithms.jpg",
+                "route": "algorithms",
+                "options": [
+                  {
+                    "name": "Graph Algorithms",
+                    "step": "graph_algorithms",
+                    "image": "graph_algorithms.jpg",
+                    "route": "graph_algorithms"
+                  },
+                  {
+                    "name": "Sorting Algorithms",
+                    "step": "sorting_algorithms",
+                    "image": "sorting_algorithms.jpg",
+                    "route": "sorting_algorithms"
+                  }
+                ]
+              },
+              {
+                "name": "Data Structures",
+                "step": "data_structures",
+                "image": "data_structures.jpg",
+                "route": "data_structures",
+                "options": [
+                  {
+                    "name": "Trees",
+                    "step": "trees",
+                    "image": "trees.jpg",
+                    "route": "trees"
+                  },
+                  {
+                    "name": "Hash Tables",
+                    "step": "hash_tables",
+                    "image": "hash_tables.jpg",
+                    "route": "hash_tables"
                   }
                 ]
               }
