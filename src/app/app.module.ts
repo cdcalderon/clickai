@@ -7,9 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PromptPageComponent } from './prompt-page/prompt-page.component';
 import { ResultPageComponent } from './result-page/result-page.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
-  declarations: [AppComponent, PromptPageComponent, ResultPageComponent],
+  declarations: [AppComponent, PromptPageComponent, ResultPageComponent, CategoryComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

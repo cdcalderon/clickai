@@ -9,6 +9,7 @@ import { PromptsService } from '../prompts.service';
 })
 export class PromptPageComponent implements OnInit {
   currentStep: any;
+  category: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -18,16 +19,12 @@ export class PromptPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      this.promptsService.getPrompts().subscribe((prompts) => {
-        console.log("params['step']", params['step']);
-
-        // this.currentStep = prompts.find(
-        //   (prompt) => prompt.step === params['step']
-        // );
-        this.currentStep = this.findStepByRoute(prompts, params['step']);
-
-        console.log(this.currentStep);
-      });
+      this.category = params['category'];
+      this.promptsService
+        .getPromptsByCategory(params['category'])
+        .subscribe((prompts) => {
+          this.currentStep = this.findStepByRoute(prompts, params['step']);
+        });
     });
   }
 
@@ -35,8 +32,7 @@ export class PromptPageComponent implements OnInit {
     this.promptsService.clearSelectionsFrom(this.currentStep.step);
     this.promptsService.addSelection(this.currentStep.step, option.name);
     if (option.options) {
-      console.log(option.route);
-      this.router.navigate(['/prompt', option.route]);
+      this.router.navigate(['/prompt', this.category, option.route]);
     } else {
       this.router.navigate(['/result']);
     }
